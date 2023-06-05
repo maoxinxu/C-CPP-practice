@@ -1,6 +1,7 @@
 #include "Include/fileOperate.h"
 
 int main(){
-    readFile(".gitignore", "r");
+    readFile("后宫地狱.txt", "r");
+    readChar(".gitignore", "r");
     return 0;
 }

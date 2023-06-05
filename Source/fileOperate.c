@@ -16,5 +16,26 @@ int readFile(char *filename, char *mode){
     while(fgets(str, N, fp) != NULL){
         printf("%s", str);
     }
+
+    fclose(fp);
     return 0;
+}
+
+int readChar(char *filename, char *mode){
+    FILE *fp = fopen(filename, mode);
+    char ch;
+    if(fp == NULL){
+        puts("这文件找不到啊，闹呢？");
+        exit(0);
+    }
+
+    while((ch = fgetc(fp) != EOF)){
+        putchar(ch);
+    }
+    putchar('\n');
+
+    fclose(fp);
+
+    return 0;
+    
 }
