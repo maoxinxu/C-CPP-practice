@@ -1,8 +1,15 @@
-hello.bin : hello.c
-	# mkdir bin
-	gcc -c main.c -o ./Release/main.o
-	gcc ./Include/fileOperate.h  ./Source/fileOperate.c -o ./Release/fileOperate.o
-	gcc ./Release/main.o ./Release/fileOperate.o -o ./Bin/run.bin
+TZ=UTC
+INCLUDE = ./Include
+
+OBJS=readfile
+TARGET=mian.o fileOperate.o
+
+
+./Bin/readfile : ./Release/main.o ./Release/fileOperate.o
+	gcc -o ./Release/readfile main.o fileOperate.o
+
+./Release/main.o : main.c
+	gcc -c main.c
 
 
 

@@ -29,12 +29,13 @@ int readChar(char *filename, char *mode){
         exit(0);
     }
 
-    while((ch = fgetc(fp) != EOF)){
+    while((ch = fgetc(fp)) != EOF){
         putchar(ch);
     }
     putchar('\n');
 
     fclose(fp);
+    puts("over~");
 
     return 0;
     
