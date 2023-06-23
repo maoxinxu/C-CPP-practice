@@ -1,3 +1,3 @@
-编译文件：make
-清理目录：make clean
-git访问令牌：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
+# 主要功能
+* 编译文件：make 
+* 清理目录：make clean 
