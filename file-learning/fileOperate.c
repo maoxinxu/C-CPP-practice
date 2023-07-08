@@ -1,4 +1,4 @@
-#include "../Include/fileOperate.h"
+#include "fileOperate.h"
 
 int readFile(char *filename, char *mode){
     // 打开文件

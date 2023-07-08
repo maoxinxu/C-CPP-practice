@@ -4,24 +4,22 @@ INCLUDE = ./Include
 OBJS=readfile
 TARGET=mian.o fileOperate.o
 
+readfile : main.o fileOperate.o
+	gcc main.o fileOperate.o -o readfile
 
-./Bin/readfile : ./Release/main.o ./Release/fileOperate.o
-	gcc -o ./Release/readfile main.o fileOperate.o
-
-./Release/main.o : main.c
+main.o : main.c
 	gcc -c main.c
 
+fileOperate.o :fileOperate.c
+	gcc -c fileOperate.c
 
-
-.PHONY : clean
+.PHONY : clean test install
 clean:
-	rm -rf ./Bin/*
-	rm -rf ./Include/*.gch
+	rm -rf ./*.o
+	rm -rf ./readfile
 
-.PHONY : test
 test:
-	./bin/hello.bin
+	./readfile
 
-.PHONY : install
 install :
 	echo "嘿嘿，毛都没干"

@@ -1,7 +1,3 @@
 /.vscode
-/Bin
-/Release
-Include/*.gch
-*.out
 *.txt
 message.txt
