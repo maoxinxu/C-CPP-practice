@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 #include "fileOperate.h"
 
 int readFile(char *filename, char *mode){
@@ -38,5 +41,12 @@ int readChar(char *filename, char *mode){
     puts("over~");
 
     return 0;
-    
+
+}
+
+int add_message(char *filename, char *mode, char *message)
+{
+    FILE *fp = fopen(filename, mode);
+    fprintf(fp, "你好%s\n", message);
+    return 0;
 }
