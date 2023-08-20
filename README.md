@@ -10,3 +10,6 @@
 
 ## mongoose模块使用
 * 待学习
+
+## shell learning
+* get 
